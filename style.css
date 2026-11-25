@@ -1,0 +1,2484 @@
+/* ========================================
+   DRONECULTIVO - IDENTIDADE VISUAL
+   AgTech Premium
+======================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --verde-escuro: #102e22;
+  --verde-principal: #174b32;
+  --verde-natural: #477b4c;
+  --verde-destaque: #a4c477;
+  --fundo-claro: #e8eee7;
+  --branco: #ffffff;
+  --texto: #263b30;
+  --texto-suave: #69786d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--branco);
+  color: var(--texto);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.cabecalho {
+  width: 100%;
+  background: var(--verde-escuro);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+  min-height: 82px;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.logo {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--branco);
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--verde-destaque);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu a {
+  color: #e3eae4;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.menu a:hover {
+  color: var(--verde-destaque);
+}
+
+.btn-login {
+  background: var(--verde-destaque);
+  color: var(--verde-escuro);
+  padding: 12px 25px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.btn-login:hover {
+  background: var(--branco);
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   DESTAQUE PRINCIPAL
+======================================== */
+
+.hero {
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 90px 8%;
+  color: var(--branco);
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(164, 196, 119, 0.18),
+      transparent 35%
+    ),
+    linear-gradient(120deg, #0b241a, #174b32 65%, #244e35);
+
+  background-position: center;
+  background-size: cover;
+  border-radius: 0 0 35px 35px;
+}
+
+.hero-content {
+  max-width: 760px;
+  position: relative;
+  z-index: 2;
+}
+
+.tag {
+  display: inline-block;
+  color: var(--verde-destaque);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: clamp(40px, 5.5vw, 66px);
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin: 25px 0;
+  color: var(--branco);
+}
+
+.hero h1 span {
+  color: var(--verde-destaque);
+}
+
+.hero p {
+  max-width: 650px;
+  color: #e1eae2;
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.hero-botoes {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-primary,
+.btn-secundario {
+  display: inline-block;
+  padding: 15px 25px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: var(--verde-destaque);
+  color: var(--verde-escuro);
+}
+
+.btn-primary:hover {
+  background: var(--branco);
+  transform: translateY(-3px);
+}
+
+.btn-secundario {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  color: var(--branco);
+}
+
+.btn-secundario:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: translateY(-3px);
+}
+
+.hero-destaque {
+  margin-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.hero-info {
+  border-left: 3px solid var(--verde-destaque);
+  padding-left: 14px;
+}
+
+.hero-info strong {
+  display: block;
+  color: var(--branco);
+  font-size: 16px;
+}
+
+.hero-info span {
+  color: #c5d3c8;
+  font-size: 12px;
+}
+
+/* ========================================
+   SOBRE A DRONECULTIVO
+======================================== */
+
+.sobre {
+  padding: 100px 8%;
+  text-align: center;
+  background: var(--branco);
+}
+
+.sobre-conteudo {
+  max-width: 900px;
+  margin: auto;
+}
+
+.tag-secao {
+  display: inline-block;
+  color: var(--verde-natural);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.sobre h2,
+.titulo-secao {
+  font-size: clamp(28px, 4vw, 38px);
+  color: var(--verde-escuro);
+  line-height: 1.3;
+  margin-bottom: 22px;
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.9;
+  color: var(--texto-suave);
+  font-size: 15px;
+}
+
+.sobre-destaque {
+  margin-top: 35px;
+  padding: 25px;
+  background: var(--fundo-claro);
+  border-left: 4px solid var(--verde-natural);
+  border-radius: 8px;
+  color: var(--verde-principal);
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* ========================================
+   SERVIÇOS
+======================================== */
+
+.servicos {
+  padding: 100px 8%;
+  text-align: center;
+  background: var(--fundo-claro);
+}
+
+.servicos .titulo-secao,
+.funcionamento .titulo-secao {
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: var(--texto-suave);
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: var(--branco);
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: left;
+  border: 1px solid #e0e8de;
+  box-shadow: 0 8px 25px rgba(16, 46, 34, 0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 15px 35px rgba(16, 46, 34, 0.12);
+}
+
+.card-icon {
+  width: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--fundo-claro);
+  color: var(--verde-principal);
+  border-radius: 12px;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.card h3 {
+  color: var(--verde-principal);
+  font-size: 19px;
+  margin-bottom: 15px;
+}
+
+.card p {
+  color: var(--texto-suave);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   COMO FUNCIONA
+======================================== */
+
+.funcionamento {
+  padding: 110px 8%;
+  background: var(--branco);
+  text-align: center;
+}
+
+.funcionamento > p {
+  color: var(--texto-suave);
+  line-height: 1.8;
+}
+
+.etapas {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 1250px;
+  margin: 55px auto 0;
+  text-align: left;
+}
+
+.etapa {
+  background: var(--fundo-claro);
+  padding: 32px 25px;
+  border-radius: 12px;
+  border-bottom: 4px solid var(--verde-natural);
+  min-height: 230px;
+  transition: 0.3s;
+}
+
+.etapa:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(16, 46, 34, 0.09);
+}
+
+.etapa span {
+  display: block;
+  color: var(--verde-natural);
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.etapa h3 {
+  color: var(--verde-escuro);
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.etapa p {
+  color: var(--texto-suave);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* ========================================
+   CONTATO
+======================================== */
+
+.contato {
+  padding: 85px 8%;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(164, 196, 119, 0.15),
+      transparent 35%
+    ),
+    var(--verde-principal);
+  color: var(--branco);
+}
+
+.contato h2 {
+  color: var(--branco);
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.contato p {
+  max-width: 650px;
+  margin: 0 auto 30px;
+  color: #dce8df;
+  line-height: 1.8;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape {
+  padding: 60px 8% 25px;
+  background: var(--verde-escuro);
+  color: var(--branco);
+}
+
+.rodape-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.rodape-marca p {
+  max-width: 380px;
+  margin-top: 18px;
+  color: #b9c9bd;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.rodape h3 {
+  color: var(--verde-destaque);
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.rodape-links {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.rodape-links a {
+  color: #d4ded6;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.rodape-links a:hover {
+  color: var(--verde-destaque);
+}
+
+.rodape-final {
+  max-width: 1200px;
+  margin: 45px auto 0;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: #aabbaf;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .etapas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .navbar {
+    padding-left: 4%;
+    padding-right: 4%;
+    gap: 18px;
+  }
+
+  .menu {
+    gap: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px 5%;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 75px 7%;
+    border-radius: 0 0 22px 22px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero-destaque {
+    gap: 20px;
+  }
+
+  .sobre,
+  .servicos,
+  .funcionamento {
+    padding: 75px 7%;
+  }
+
+  .cards,
+  .etapas {
+    grid-template-columns: 1fr;
+  }
+
+  .etapa {
+    min-height: auto;
+  }
+
+  .rodape-container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .contato {
+    padding: 70px 7%;
+  }
+}
+
+@media (max-width: 420px) {
+  .logo {
+    font-size: 21px;
+  }
+
+  .menu {
+    gap: 12px;
+  }
+
+  .menu a {
+    font-size: 12px;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .hero-botoes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-botoes a {
+    text-align: center;
+  }
+}
+
+/* ========================================
+   IMAGEM AGRÍCOLA - DESTAQUE PRINCIPAL
+======================================== */
+
+.hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(9, 32, 22, 0.94) 0%,
+      rgba(12, 48, 31, 0.82) 48%,
+      rgba(12, 48, 31, 0.3) 100%
+    ),
+    url("https://images.unsplash.com/photo-1713952160156-bb59cac789a9?auto=format&fit=crop&w=2000&q=85");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Ajuste da apresentação sobre a imagem */
+
+.hero-content {
+  max-width: 760px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1,
+.hero p,
+.hero .tag {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* IMAGENS DOS SERVIÇOS */
+
+.card {
+  overflow: hidden;
+  padding: 0 0 30px;
+}
+
+.card-imagem {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-icon {
+  margin: 25px 25px 18px;
+}
+
+.card h3,
+.card p {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.card p {
+  margin-bottom: 5px;
+}
+
+/* ========================================
+   LOGIN E CADASTRO - DRONECULTIVO
+======================================== */
+
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+  background: #e8eee7;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 40px rgba(16, 46, 34, 0.12);
+}
+
+.auth-logo {
+  display: block;
+  text-align: center;
+  color: #174b32;
+  font-size: 23px;
+  font-weight: 800;
+  text-decoration: none;
+  margin-bottom: 35px;
+}
+
+.auth-logo span {
+  color: #477b4c;
+}
+
+.auth-titulo {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.auth-titulo h1 {
+  color: #102e22;
+  margin-bottom: 8px;
+}
+
+.auth-titulo p {
+  color: #68766b;
+}
+
+.auth-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-card label {
+  color: #174b32;
+  font-weight: 600;
+  margin: 14px 0 8px;
+}
+
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d5ded4;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+  background: #ffffff;
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: #477b4c;
+}
+
+.auth-botao {
+  margin-top: 25px;
+  padding: 15px;
+  background: #174b32;
+  color: #ffffff;
+  border: none;
+  border-radius: 9px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-botao:hover {
+  background: #477b4c;
+}
+
+.auth-alternativa {
+  text-align: center;
+  margin-top: 22px;
+  color: #68766b;
+  font-size: 14px;
+}
+
+.auth-alternativa button {
+  border: none;
+  background: none;
+  color: #477b4c;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.auth-mensagem {
+  min-height: 22px;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.auth-voltar {
+  display: block;
+  text-align: center;
+  margin-top: 25px;
+  color: #477b4c;
+  text-decoration: none;
+}
+
+.auth-voltar:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-card {
+    padding: 28px 22px;
+  }
+  .auth-alternativa a {
+    color: #477b4c;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .auth-alternativa a:hover {
+    text-decoration: underline;
+  }
+
+  .auth-card form[hidden] {
+    display: none;
+  }
+}
+
+/* ===== PAINEL DO FAZENDEIRO ===== */
+
+.pagina-fazendeiro {
+  background: #e8eee7;
+  min-height: 100vh;
+}
+
+.painel-header {
+  background: #102e22;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.painel-header .login-logo {
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.painel-header .login-logo span {
+  color: #a4c477;
+}
+
+.painel-header .btn-login {
+  background: #a4c477;
+  color: #102e22;
+  padding: 11px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.painel-fazendeiro {
+  width: 86%;
+  max-width: 1200px;
+  margin: 55px auto;
+}
+
+.boas-vindas {
+  background: linear-gradient(120deg, #174b32, #477b4c);
+  padding: 55px 45px;
+  border-radius: 18px;
+  color: white;
+  margin-bottom: 35px;
+}
+
+.boas-vindas span {
+  color: #c8dea5;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.boas-vindas h1 {
+  font-size: 36px;
+  margin: 15px 0;
+}
+
+.boas-vindas p {
+  color: #e8eee7;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.painel-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.painel-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(16, 46, 34, 0.07);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.painel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(16, 46, 34, 0.13);
+}
+
+.painel-icone {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.painel-card h2 {
+  color: #174b32;
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.painel-card p {
+  color: #68756b;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.painel-card a {
+  display: inline-block;
+  background: #174b32;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.painel-card a:hover {
+  background: #477b4c;
+}
+
+.painel-rodape {
+  text-align: center;
+  padding: 25px;
+  color: #68756b;
+}
+
+/* Responsividade */
+
+@media (max-width: 650px) {
+  .painel-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .painel-fazendeiro {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .boas-vindas {
+    padding: 35px 25px;
+  }
+
+  .boas-vindas h1 {
+    font-size: 27px;
+  }
+}
+
+/* ===== PÁGINA DE ALUGUEL DE DRONES ===== */
+
+.pagina-aluguel {
+  background: #e8eee7;
+  min-height: 100vh;
+}
+
+.aluguel-conteudo {
+  width: 86%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.aluguel-intro {
+  background: linear-gradient(120deg, #174b32, #477b4c);
+  color: white;
+  padding: 45px;
+  border-radius: 18px;
+  margin-bottom: 35px;
+}
+
+.aluguel-intro span {
+  color: #c8dea5;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+.aluguel-intro h1 {
+  font-size: 34px;
+  margin: 15px 0;
+}
+
+.aluguel-intro p {
+  color: #e8eee7;
+  line-height: 1.7;
+}
+
+.drones-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.drone-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(16, 46, 34, 0.08);
+  transition: 0.3s;
+}
+
+.drone-card:hover {
+  transform: translateY(-5px);
+}
+
+.drone-imagem {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.drone-info {
+  padding: 25px;
+}
+
+.drone-info h2 {
+  color: #174b32;
+  margin-bottom: 12px;
+}
+
+.drone-info p {
+  color: #68756b;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.drone-preco {
+  color: #477b4c;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.btn-alugar {
+  display: inline-block;
+  background: #174b32;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-alugar:hover {
+  background: #477b4c;
+}
+
+.form-aluguel {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 30px;
+  box-shadow: 0 5px 20px rgba(16, 46, 34, 0.07);
+}
+
+.form-aluguel label {
+  display: block;
+  color: #174b32;
+  font-weight: 700;
+  margin: 15px 0 8px;
+}
+
+.form-aluguel input,
+.form-aluguel select,
+.form-aluguel textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d5ded3;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.form-aluguel input:focus,
+.form-aluguel select:focus,
+.form-aluguel textarea:focus {
+  border-color: #477b4c;
+}
+
+@media (max-width: 650px) {
+  .drones-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aluguel-intro {
+    padding: 30px 22px;
+  }
+
+  .aluguel-intro h1 {
+    font-size: 27px;
+  }
+}
+
+/* ===== PÁGINA DE RELATÓRIOS ===== */
+
+.pagina-relatorios {
+  background: #e8eee7;
+  min-height: 100vh;
+}
+
+.relatorios-conteudo {
+  width: 86%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.relatorios-intro {
+  background: linear-gradient(120deg, #174b32, #477b4c);
+  color: white;
+  padding: 45px;
+  border-radius: 18px;
+  margin-bottom: 35px;
+}
+
+.relatorios-intro span {
+  color: #c8dea5;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.relatorios-intro h1 {
+  font-size: 34px;
+  margin: 15px 0;
+}
+
+.relatorios-intro p {
+  color: #e8eee7;
+  line-height: 1.7;
+}
+
+.relatorios-resumo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.relatorio-card {
+  background: white;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(16, 46, 34, 0.07);
+}
+
+.relatorio-card span {
+  font-size: 30px;
+}
+
+.relatorio-card h3 {
+  color: #68756b;
+  font-size: 15px;
+  margin: 15px 0 8px;
+}
+
+.relatorio-card strong {
+  color: #174b32;
+  font-size: 25px;
+}
+
+.relatorio-lista {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(16, 46, 34, 0.07);
+  overflow-x: auto;
+}
+
+.relatorio-lista h2 {
+  color: #174b32;
+  margin-bottom: 22px;
+}
+
+.relatorio-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 550px;
+}
+
+.relatorio-tabela th {
+  background: #174b32;
+  color: white;
+  padding: 15px;
+  text-align: left;
+}
+
+.relatorio-tabela td {
+  padding: 15px;
+  border-bottom: 1px solid #e1e8df;
+  color: #526256;
+}
+
+.relatorio-tabela tr:hover td {
+  background: #f3f7f1;
+}
+
+.status-relatorio {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #e5f0df;
+  color: #315d36;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.btn-relatorio {
+  display: inline-block;
+  background: #174b32;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-relatorio:hover {
+  background: #477b4c;
+}
+
+@media (max-width: 650px) {
+  .relatorios-resumo {
+    grid-template-columns: 1fr;
+  }
+
+  .relatorios-intro {
+    padding: 30px 22px;
+  }
+
+  .relatorios-intro h1 {
+    font-size: 27px;
+  }
+}
+
+/* ===== ALUGUEL DE DRONES ===== */
+
+body:has(.form-propriedade) {
+  background: #e8eee7;
+  min-height: 100vh;
+}
+
+.painel-header {
+  background: #102e22;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.painel-header h2 {
+  color: white;
+  font-size: 23px;
+  margin: 0;
+}
+
+.painel-header a {
+  background: #a4c477;
+  color: #102e22;
+  padding: 11px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.painel-header a:hover {
+  background: #c8dea5;
+}
+
+.painel-empresa {
+  width: 86%;
+  max-width: 1100px;
+  margin: 50px auto;
+}
+
+.empresa-boas-vindas {
+  background: linear-gradient(120deg, #174b32, #477b4c);
+  color: white;
+  padding: 45px;
+  border-radius: 18px;
+  margin-bottom: 35px;
+}
+
+.empresa-boas-vindas h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.empresa-boas-vindas p {
+  color: #e8eee7;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.empresa-modulos {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(16, 46, 34, 0.08);
+}
+
+.empresa-modulos h2 {
+  color: #174b32;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.form-propriedade {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 22px;
+}
+
+.form-propriedade label {
+  color: #174b32;
+  font-weight: 700;
+  align-self: end;
+}
+
+.form-propriedade input,
+.form-propriedade select,
+.form-propriedade textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #d5ded3;
+  border-radius: 8px;
+  background: #fafcf9;
+  color: #263d2d;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.form-propriedade input:focus,
+.form-propriedade select:focus,
+.form-propriedade textarea:focus {
+  border-color: #477b4c;
+  box-shadow: 0 0 0 3px rgba(71, 123, 76, 0.12);
+}
+
+.form-propriedade textarea {
+  resize: vertical;
+}
+
+.form-propriedade button {
+  grid-column: 1 / -1;
+  background: #174b32;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-propriedade button:hover {
+  background: #477b4c;
+}
+
+#mensagemAluguel {
+  grid-column: 1 / -1;
+  color: #174b32;
+  font-weight: 600;
+}
+
+@media (max-width: 650px) {
+  .painel-empresa {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .empresa-boas-vindas {
+    padding: 30px 22px;
+  }
+
+  .empresa-boas-vindas h1 {
+    font-size: 27px;
+  }
+
+  .empresa-modulos {
+    padding: 22px;
+  }
+
+  .form-propriedade {
+    grid-template-columns: 1fr;
+  }
+
+  .form-propriedade button,
+  #mensagemAluguel {
+    grid-column: 1;
+  }
+}
+
+/* ===== PÁGINA DE RELATÓRIOS ===== */
+
+.painel-empresa {
+  width: 86%;
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+.empresa-boas-vindas {
+  background: linear-gradient(120deg, #174b32, #477b4c);
+  color: white;
+  padding: 45px;
+  border-radius: 18px;
+  margin-bottom: 35px;
+}
+
+.empresa-boas-vindas h1 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+.empresa-boas-vindas p {
+  color: #e8eee7;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.empresa-modulos {
+  background: white;
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(16, 46, 34, 0.08);
+}
+
+.empresa-modulos h2 {
+  color: #174b32;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.empresa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.modulo {
+  background: #f5f8f3;
+  border: 1px solid #e1e9de;
+  padding: 28px;
+  border-radius: 14px;
+  transition: 0.3s;
+}
+
+.modulo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(16, 46, 34, 0.1);
+  border-color: #a4c477;
+}
+
+.modulo span {
+  font-size: 35px;
+  display: block;
+  margin-bottom: 18px;
+}
+
+.modulo h3 {
+  color: #174b32;
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.modulo p {
+  color: #68756b;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+@media (max-width: 850px) {
+  .empresa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .painel-empresa {
+    width: 90%;
+    margin: 30px auto;
+  }
+
+  .empresa-boas-vindas {
+    padding: 30px 22px;
+  }
+
+  .empresa-boas-vindas h1 {
+    font-size: 27px;
+  }
+
+  .empresa-modulos {
+    padding: 22px;
+  }
+
+  .empresa-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== GERENCIAMENTO DE CONTRATOS ===== */
+
+.contratos-solicitacoes {
+  margin-top: 30px;
+}
+
+.contrato-item {
+  background: #f5f8f3;
+  border: 1px solid #e1e9de;
+  border-left: 5px solid #477b4c;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 18px;
+}
+
+.contrato-item h3 {
+  color: #174b32;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.contrato-item p {
+  color: #68756b;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.contrato-status {
+  display: inline-block;
+  margin-top: 12px;
+  background: #f7ebcb;
+  color: #795b18;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .contrato-item {
+    padding: 18px;
+  }
+}
+
+/* ===== CONSULTA DE RENOVAÇÕES ===== */
+
+.contratos-solicitacoes {
+  margin-top: 30px;
+}
+
+.contratos-solicitacoes > p {
+  color: #68756b;
+  margin-bottom: 20px;
+}
+
+.contrato-item {
+  background: #f5f8f3;
+  border: 1px solid #e1e9de;
+  border-left: 5px solid #477b4c;
+  padding: 25px;
+  border-radius: 12px;
+  margin-top: 18px;
+}
+
+.contrato-item h3 {
+  color: #174b32;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.contrato-item p {
+  color: #68756b;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.contrato-status {
+  display: inline-block;
+  margin-top: 12px;
+  background: #f7ebcb;
+  color: #795b18;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .contrato-item {
+    padding: 18px;
+  }
+}
+
+/* ===== TABELA DE EQUIPAMENTOS ===== */
+
+.tabela-drones {
+  margin-top: 30px;
+}
+
+.descricao-tabela {
+  color: #68756b;
+  margin: 12px 0 25px;
+  line-height: 1.6;
+}
+
+.tabela-responsiva {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.tabela-equipamentos {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  text-align: center;
+}
+
+.tabela-equipamentos th {
+  background: #174b32;
+  color: white;
+  padding: 17px 12px;
+  font-size: 14px;
+}
+
+.tabela-equipamentos td {
+  padding: 17px 12px;
+  border: 1px solid #d5e2d0;
+  color: #344b39;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.tabela-equipamentos tbody tr:nth-child(odd) {
+  background: #e8eee7;
+}
+
+.tabela-equipamentos tbody tr:nth-child(even) {
+  background: #f7faf5;
+}
+
+.tabela-equipamentos tbody tr:hover {
+  background: #dce9d7;
+}
+
+.tabela-equipamentos td strong {
+  display: block;
+  color: #174b32;
+}
+
+.tabela-equipamentos td small {
+  display: block;
+  color: #68756b;
+  margin-top: 4px;
+}
+
+@media (max-width: 650px) {
+  .tabela-equipamentos {
+    min-width: 650px;
+  }
+
+  .tabela-equipamentos th,
+  .tabela-equipamentos td {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+}
+
+/* ===== CONTROLE DE VOOS ===== */
+
+.voos-formulario,
+.voos-lista {
+  margin-top: 30px;
+}
+
+.voo-card {
+  background: #f5f8f3;
+  border: 1px solid #dde7da;
+  border-left: 5px solid #477b4c;
+  border-radius: 12px;
+  padding: 25px;
+  margin-top: 18px;
+}
+
+.voo-card h3 {
+  color: #174b32;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.voo-card p {
+  color: #68756b;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.voo-status {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.voo-status.agendado {
+  background: #f7ebcb;
+  color: #795b18;
+}
+
+.voo-status.realizado {
+  background: #dceedc;
+  color: #246238;
+}
+
+.btn-realizado {
+  background: #174b32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-realizado:hover {
+  background: #477b4c;
+}
+
+@media (max-width: 650px) {
+  .voo-card {
+    padding: 18px;
+  }
+}
+
+/* ===== ALERTAS DAS PROPRIEDADES ===== */
+
+.filtro-alertas {
+  display: block;
+  width: 100%;
+  max-width: 350px;
+  padding: 13px;
+  margin: 15px 0 25px;
+  border: 1px solid #d5ded3;
+  border-radius: 8px;
+  background: #fafcf9;
+  color: #174b32;
+  font-size: 15px;
+}
+
+.alerta-card {
+  background: #f5f8f3;
+  border: 1px solid #dde7da;
+  border-left: 5px solid #477b4c;
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 18px;
+}
+
+.alerta-card h3 {
+  color: #174b32;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.alerta-card p {
+  color: #68756b;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+
+.alerta-prioridade {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.alerta-prioridade.alta {
+  background: #f9ddda;
+  color: #a12e27;
+}
+
+.alerta-prioridade.média {
+  background: #f7ebcb;
+  color: #795b18;
+}
+
+.alerta-prioridade.baixa {
+  background: #dceedc;
+  color: #246238;
+}
+
+.btn-resolver {
+  background: #174b32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 18px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn-resolver:hover {
+  background: #477b4c;
+}
+
+@media (max-width: 600px) {
+  .alerta-card {
+    padding: 18px;
+  }
+
+  .filtro-alertas {
+    max-width: 100%;
+  }
+}
+
+/* ===== ANÁLISE POR INTELIGÊNCIA ARTIFICIAL ===== */
+
+.modulo-yolo {
+  border-left: 5px solid #477b4c;
+  padding: 30px;
+}
+
+.modulo-yolo span {
+  font-size: 38px;
+}
+
+.modulo-yolo h3 {
+  color: #174b32;
+  margin: 15px 0;
+}
+
+.modulo-yolo p {
+  color: #68756b;
+  line-height: 1.8;
+}
+
+.espacamento-secao {
+  height: 30px;
+}
+
+.aviso-ia {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: #e8eee7;
+  border-left: 5px solid #477b4c;
+  border-radius: 10px;
+  padding: 22px;
+  margin-top: 30px;
+}
+
+.aviso-ia span {
+  font-size: 25px;
+}
+
+.aviso-ia h3 {
+  color: #174b32;
+  margin-bottom: 8px;
+}
+
+.aviso-ia p {
+  color: #68756b;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .modulo-yolo {
+    padding: 22px;
+  }
+
+  .aviso-ia {
+    padding: 17px;
+  }
+}
+
+/* AÇÕES DOS CONTRATOS */
+
+.contrato-acoes {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.btn-aprovar,
+.btn-recusar {
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-aprovar {
+  background: #174b32;
+  color: white;
+}
+
+.btn-aprovar:hover {
+  background: #477b4c;
+}
+
+.btn-recusar {
+  background: #f3e2e0;
+  color: #a52a2a;
+}
+
+.btn-recusar:hover {
+  background: #e8c7c3;
+}
+
+.contrato-status {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  background: #e8eee7;
+  color: #174b32;
+  font-weight: bold;
+}
+
+/* ==========================================
+   CADASTRO DE PROPRIEDADE - DRONECULTIVO
+   ========================================== */
+
+body:has(.conteudo-propriedade) {
+  background: #f3f6f1;
+}
+
+/* Cabeçalho */
+.topo-propriedade {
+  min-height: 78px;
+  padding: 16px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #102e22;
+}
+
+.logo-propriedade {
+  color: #fff;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.logo-propriedade span {
+  color: #a4c477;
+}
+
+.voltar-painel {
+  padding: 11px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.voltar-painel:hover {
+  background: #a4c477;
+  color: #102e22;
+}
+
+/* Área principal */
+.conteudo-propriedade {
+  width: 90%;
+  max-width: 1100px;
+  margin: 55px auto 75px;
+}
+
+/* Banner */
+.apresentacao-propriedade {
+  position: relative;
+  overflow: hidden;
+  padding: 55px 50px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #102e22, #245a3b);
+  color: white;
+}
+
+.apresentacao-propriedade::after {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  bottom: -140px;
+  border: 35px solid rgba(164, 196, 119, 0.15);
+  border-radius: 50%;
+}
+
+.etiqueta-propriedade {
+  display: inline-block;
+  margin-bottom: 18px;
+  padding: 8px 14px;
+  border-radius: 30px;
+  background: rgba(164, 196, 119, 0.16);
+  color: #c5df9d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.apresentacao-propriedade h1 {
+  max-width: 650px;
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: clamp(30px, 4vw, 42px);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.apresentacao-propriedade p {
+  max-width: 650px;
+  margin: 0;
+  color: #dce8df;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Card do formulário */
+.area-formulario {
+  position: relative;
+  z-index: 1;
+  max-width: 850px;
+  margin: -15px auto 0;
+  padding: 42px;
+  border: 1px solid #e3eae2;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 15px 40px rgba(16, 46, 34, 0.08);
+}
+
+.titulo-formulario {
+  margin-bottom: 30px;
+}
+
+.titulo-formulario h2 {
+  margin: 0 0 9px;
+  color: #173c2a;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.titulo-formulario p {
+  margin: 0;
+  color: #78857b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* Formulário */
+#formPropriedade {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.campo-formulario label {
+  color: #254532;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.campo-formulario input,
+.campo-formulario select {
+  width: 100%;
+  min-height: 52px;
+  padding: 14px 16px;
+  border: 1px solid #dce5dc;
+  border-radius: 9px;
+  background: #f9fbf8;
+  color: #263b30;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  transition: 0.25s;
+}
+
+.campo-formulario input::placeholder {
+  color: #a0aaa1;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus {
+  outline: none;
+  border-color: #477b4c;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(71, 123, 76, 0.12);
+}
+
+/* Botão */
+.botao-cadastrar {
+  width: 100%;
+  min-height: 54px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 9px;
+  background: #174b32;
+  color: white;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao-cadastrar:hover {
+  background: #286542;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(23, 75, 50, 0.17);
+}
+
+/* Mensagem */
+#mensagemPropriedade {
+  margin-top: 8px;
+  color: #286542;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Rodapé */
+.rodape-propriedade {
+  padding: 28px 15px;
+  border-top: 1px solid #e2e9e1;
+  color: #849087;
+  text-align: center;
+  font-size: 12px;
+}
+
+/* Celular */
+@media (max-width: 650px) {
+  .topo-propriedade {
+    padding: 15px 5%;
+  }
+
+  .logo-propriedade {
+    font-size: 18px;
+  }
+
+  .voltar-painel {
+    padding: 9px 12px;
+    font-size: 11px;
+  }
+
+  .conteudo-propriedade {
+    width: 92%;
+    margin: 30px auto 50px;
+  }
+
+  .apresentacao-propriedade {
+    padding: 35px 25px;
+  }
+
+  .apresentacao-propriedade p {
+    font-size: 13px;
+  }
+
+  .area-formulario {
+    padding: 27px 20px;
+  }
+
+  .titulo-formulario h2 {
+    font-size: 19px;
+  }
+}
+
+/* MONITORAMENTO AGRÍCOLA */
+
+.monitoramento-grafico {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.grafico-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.grafico-info {
+  display: flex;
+  justify-content: space-between;
+  color: #263b30;
+  font-size: 14px;
+}
+
+.barra-fundo {
+  width: 100%;
+  height: 13px;
+  background: #e8eee7;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.barra-progresso {
+  height: 100%;
+  background: #477b4c;
+  border-radius: 20px;
+}
+
+.alerta-monitoramento {
+  padding: 18px;
+  margin-top: 15px;
+  background: #ffffff;
+  border-left: 5px solid #477b4c;
+  border-radius: 10px;
+}
+
+.alerta-monitoramento h3 {
+  color: #174b32;
+  margin-bottom: 8px;
+}
+
+.alerta-monitoramento p {
+  color: #69786d;
+  line-height: 1.6;
+}
+
+.alerta-monitoramento.atencao {
+  border-left-color: #d6a343;
+}
+
+#botaoAtualizarMonitoramento {
+  padding: 13px 22px;
+  background: #174b32;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#botaoAtualizarMonitoramento:hover {
+  background: #477b4c;
+}
+
+/* CORREÇÃO VISUAL DO CONTROLE DE VOOS */
+
+.voos-formulario .form-propriedade {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.voos-formulario .form-propriedade label {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.voos-formulario .form-propriedade input,
+.voos-formulario .form-propriedade select,
+.voos-formulario .form-propriedade textarea {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.voos-formulario .form-propriedade button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* PAINEL DE CONSULTA DE RELATÓRIOS DE VOOS */
+
+section.filtro-relatorios-voos {
+  background: #ffffff;
+  padding: 28px;
+  margin: 25px 0;
+  border-radius: 16px;
+  border: 1px solid #dce7dc;
+  box-shadow: 0 5px 18px rgba(16, 46, 34, 0.09);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+section.filtro-relatorios-voos h2 {
+  color: #174b32;
+  font-size: 23px;
+  margin: 0 0 8px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e8eee7;
+}
+
+section.filtro-relatorios-voos input#filtroVoos,
+section.filtro-relatorios-voos select#filtroStatus {
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 12px 15px;
+  border: 1px solid #cbd9cb;
+  border-radius: 9px;
+  background: #f8faf7;
+  color: #263b30;
+  font-size: 15px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+section.filtro-relatorios-voos input#filtroVoos:focus,
+section.filtro-relatorios-voos select#filtroStatus:focus {
+  border-color: #477b4c;
+  box-shadow: 0 0 0 3px rgba(71, 123, 76, 0.12);
+}
+
+section.filtro-relatorios-voos #resultadoFiltro {
+  color: #174b32;
+  font-weight: 600;
+  margin: 5px 0 0;
+}
+
+section.filtro-relatorios-voos #areaTotalVoos {
+  background: #e8eee7;
+  color: #174b32;
+  padding: 15px;
+  border-radius: 9px;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  section.filtro-relatorios-voos {
+    padding: 18px;
+  }
+}
+
+/* ÁREA DE ANÁLISE POR IA */
+
+.area-analise-ia,
+.historico-ia {
+  background: #ffffff;
+  padding: 28px;
+  margin: 25px 0;
+  border: 1px solid #dce7dc;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgba(16, 46, 34, 0.08);
+}
+
+.area-analise-ia h2,
+.historico-ia h2 {
+  color: #174b32;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e8eee7;
+}
+
+.area-analise-ia .form-propriedade {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.area-analise-ia label {
+  font-weight: 600;
+  color: #263b30;
+}
+
+.area-analise-ia input,
+.area-analise-ia textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd9cb;
+  border-radius: 9px;
+  background: #f8faf7;
+}
+
+.area-analise-ia button {
+  margin-top: 12px;
+  padding: 13px;
+  border: none;
+  border-radius: 9px;
+  background: #174b32;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.area-analise-ia button:hover {
+  background: #477b4c;
+}
+
+@media (max-width: 600px) {
+  .area-analise-ia,
+  .historico-ia {
+    padding: 18px;
+  }
+}
+
+/* RELATÓRIOS DE VOOS */
+
+.filtro-relatorios-voos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.filtro-relatorios-voos label {
+  font-weight: 600;
+  color: #174b32;
+}
+
+.filtro-relatorios-voos input,
+.filtro-relatorios-voos select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #cbd9cb;
+  border-radius: 9px;
+  background: #f8faf7;
+}
+
+#botaoAtualizarRelatorio,
+#botaoImprimirRelatorio {
+  margin: 8px 8px 8px 0;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #174b32;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#botaoAtualizarRelatorio:hover,
+#botaoImprimirRelatorio:hover {
+  background: #477b4c;
+}
+
+@media print {
+  .painel-header a,
+  #botaoAtualizarRelatorio,
+  #botaoImprimirRelatorio,
+  .filtro-relatorios-voos {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .empresa-modulos,
+  .modulo,
+  .voo-card {
+    box-shadow: none;
+    break-inside: avoid;
+  }
+}
