@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Contratos | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../contratos.js" defer></script>
+  </head>
+
+  <body>
+    <header class="painel-header">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="empresa.html">Voltar ao painel</a>
+    </header>
+
+    <main class="painel-empresa">
+      <section class="empresa-boas-vindas">
+        <h1>Gerenciamento de Contratos</h1>
+        <p>Administre os contratos de aluguel e as renovações dos drones.</p>
+      </section>
+
+      <!-- CONTROLE DE CONTRATOS -->
+      <section class="empresa-modulos">
+        <h2>Controle de contratos</h2>
+
+        <div class="empresa-grid">
+          <article class="modulo">
+            <span>📄</span>
+            <h3>Pedidos de aluguel</h3>
+            <p>Solicitações de aluguel recebidas.</p>
+            <strong id="totalAlugueisResumo">0</strong>
+          </article>
+
+          <article class="modulo">
+            <span>🔄</span>
+            <h3>Renovações</h3>
+            <p>Solicitações aguardando análise.</p>
+            <strong id="totalRenovacoes">0</strong>
+          </article>
+
+          <article class="modulo">
+            <span>📁</span>
+            <h3>Histórico</h3>
+            <p>Contratos anteriores.</p>
+            <strong id="totalHistorico">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <!-- SOLICITAÇÕES DE RENOVAÇÃO -->
+      <section class="empresa-modulos contratos-solicitacoes">
+        <h2>Solicitações de renovação</h2>
+
+        <div id="listaRenovacoes">
+          <p>Carregando solicitações...</p>
+        </div>
+      </section>
+
+      <!-- SOLICITAÇÕES DE ALUGUEL -->
+      <section class="empresa-modulos contratos-solicitacoes">
+        <h2>Solicitações de aluguel</h2>
+
+        <div class="empresa-grid">
+          <div class="modulo">
+            <h3>Total de aluguéis</h3>
+            <p id="totalAlugueis">0</p>
+          </div>
+        </div>
+
+        <div id="listaAlugueis">
+          <p>Nenhum pedido de aluguel encontrado.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | DroneCultivo</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../auth.js" defer></script>
+  </head>
+  <body>
+    <main class="auth-container">
+      <section class="auth-card">
+        <h1 class="auth-logo">DroneCultivo</h1>
+        <h2 class="auth-titulo">Bem-vindo de volta!</h2>
+        <p>Entre na sua conta para continuar.</p>
+
+        <form id="loginForm">
+          <label for="email">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            placeholder="Digite sua senha"
+            required
+          />
+
+          <button type="submit" class="auth-botao">Entrar</button>
+
+          <p id="mensagem" class="auth-mensagem"></p>
+        </form>
+
+        <p class="auth-alternativa">
+          Ainda não tem conta?
+          <a href="./cadastro.html">Criar conta</a>
+        </p>
+
+        <a href="../index.html" class="auth-voltar"> Voltar para o início </a>
+      </section>
+    </main>
+  </body>
+</html>

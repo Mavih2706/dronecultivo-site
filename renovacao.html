@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Renovação de Aluguel | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../renovacao.js" defer></script>
+  </head>
+
+  <body>
+    <header class="painel-header">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="fazendeiro.html">Voltar ao painel</a>
+    </header>
+
+    <main class="painel-empresa">
+      <section class="empresa-boas-vindas">
+        <h1>Renovação de Aluguel</h1>
+        <p>
+          Solicite a continuidade dos serviços de monitoramento e pulverização
+          agrícola.
+        </p>
+      </section>
+
+      <!-- FORMULÁRIO DE RENOVAÇÃO -->
+      <section class="empresa-modulos">
+        <h2>Solicitar renovação</h2>
+
+        <form class="form-propriedade" id="formRenovacao">
+          <label for="responsavel">Nome do responsável</label>
+          <input
+            type="text"
+            id="responsavel"
+            placeholder="Digite seu nome"
+            required
+          />
+
+          <label for="propriedade">Nome da propriedade</label>
+          <input
+            type="text"
+            id="propriedade"
+            placeholder="Nome da fazenda"
+            required
+          />
+
+          <label for="servico">Serviço contratado</label>
+          <select id="servico" required>
+            <option value="">Selecione o serviço</option>
+            <option value="Monitoramento agrícola">
+              Monitoramento agrícola
+            </option>
+            <option value="Pulverização agrícola">Pulverização agrícola</option>
+            <option value="Monitoramento e pulverização">
+              Monitoramento e pulverização
+            </option>
+          </select>
+
+          <label for="contrato">Número ou identificação do contrato</label>
+          <input
+            type="text"
+            id="contrato"
+            placeholder="Identificação do contrato"
+            required
+          />
+
+          <label for="data">Nova data desejada para início</label>
+          <input type="date" id="data" required />
+
+          <label for="periodo">Período adicional</label>
+          <select id="periodo" required>
+            <option value="">Selecione o período</option>
+            <option value="1 semana">1 semana</option>
+            <option value="15 dias">15 dias</option>
+            <option value="1 mês">1 mês</option>
+            <option value="A combinar">A combinar</option>
+          </select>
+
+          <label for="observacoes">Observações</label>
+          <textarea
+            id="observacoes"
+            rows="4"
+            placeholder="Informações adicionais..."
+          ></textarea>
+
+          <button type="submit">Solicitar renovação</button>
+
+          <p id="mensagemRenovacao"></p>
+        </form>
+      </section>
+
+      <!-- CONSULTA DE RENOVAÇÕES -->
+      <section class="empresa-modulos contratos-solicitacoes">
+        <h2>Minhas solicitações</h2>
+
+        <p>Acompanhe as solicitações de renovação cadastradas.</p>
+
+        <div id="listaMinhasRenovacoes">
+          <p>Carregando solicitações...</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

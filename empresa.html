@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Painel Administrativo | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      body {
+        background: #f3f7f3;
+        color: #24352c;
+        font-family: Arial, sans-serif;
+      }
+
+      .topo-admin {
+        background: #123d2b;
+        color: white;
+        padding: 20px 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .topo-admin h2 {
+        margin: 0;
+      }
+
+      .topo-admin a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 18px;
+        border: 1px solid #8bbd9b;
+        border-radius: 8px;
+      }
+
+      .conteudo-admin {
+        width: 90%;
+        max-width: 1200px;
+        margin: 35px auto;
+      }
+
+      .boas-vindas-admin {
+        background: linear-gradient(120deg, #123d2b, #246344);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+      }
+
+      .boas-vindas-admin h1 {
+        margin-top: 0;
+      }
+
+      .boas-vindas-admin p {
+        color: #d4eadb;
+      }
+
+      .indicadores-admin {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+        margin-bottom: 35px;
+      }
+
+      .indicador-admin {
+        background: white;
+        padding: 23px;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(20, 60, 35, 0.06);
+        border-bottom: 4px solid #27804d;
+      }
+
+      .indicador-admin p {
+        color: #718075;
+        margin: 0 0 12px;
+      }
+
+      .indicador-admin strong {
+        font-size: 30px;
+        color: #174a31;
+      }
+
+      .secao-admin {
+        background: white;
+        padding: 28px;
+        border-radius: 14px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 15px rgba(20, 60, 35, 0.06);
+      }
+
+      .secao-admin h2 {
+        color: #174a31;
+        margin-top: 0;
+      }
+
+      .grade-modulos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .modulo-admin {
+        background: #f8fbf8;
+        border: 1px solid #e0eae2;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .modulo-admin span {
+        font-size: 27px;
+      }
+
+      .modulo-admin h3 {
+        color: #174a31;
+        margin-bottom: 8px;
+      }
+
+      .modulo-admin p {
+        color: #718075;
+        font-size: 14px;
+        min-height: 40px;
+      }
+
+      .modulo-admin a {
+        display: inline-block;
+        background: #197344;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        border-radius: 7px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      .modulo-admin a:hover {
+        background: #105a34;
+      }
+
+      .lista-propriedades {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .propriedade-admin {
+        background: #f8fbf8;
+        border: 1px solid #e0eae2;
+        border-left: 5px solid #27804d;
+        border-radius: 10px;
+        padding: 20px;
+      }
+
+      .propriedade-admin h3 {
+        color: #174a31;
+        margin-top: 0;
+      }
+
+      .propriedade-admin p {
+        color: #617267;
+        line-height: 1.6;
+        font-size: 14px;
+      }
+
+      .sem-propriedades {
+        color: #718075;
+        background: #f8fbf8;
+        padding: 22px;
+        border-radius: 10px;
+        grid-column: 1 / -1;
+      }
+
+      @media (max-width: 850px) {
+        .indicadores-admin,
+        .grade-modulos {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 550px) {
+        .indicadores-admin,
+        .grade-modulos,
+        .lista-propriedades {
+          grid-template-columns: 1fr;
+        }
+
+        .secao-admin {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topo-admin">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="login.html">Sair</a>
+    </header>
+
+    <main class="conteudo-admin">
+      <section class="boas-vindas-admin">
+        <h1>Painel Administrativo</h1>
+        <p>Bem-vindo ao centro de gerenciamento da DroneCultivo.</p>
+      </section>
+
+      <section class="indicadores-admin">
+        <article class="indicador-admin">
+          <p>👨‍🌾 Fazendeiros</p>
+          <strong id="totalFazendeiros">0</strong>
+        </article>
+
+        <article class="indicador-admin">
+          <p>🚁 Drones</p>
+          <strong id="totalDrones">0</strong>
+        </article>
+
+        <article class="indicador-admin">
+          <p>🌾 Propriedades</p>
+          <strong id="totalPropriedades">0</strong>
+        </article>
+
+        <article class="indicador-admin">
+          <p>🔔 Alertas</p>
+          <strong id="totalAlertas">0</strong>
+        </article>
+      </section>
+
+      <section class="secao-admin">
+        <h2>Gerenciamento da empresa</h2>
+
+        <div class="grade-modulos">
+          <article class="modulo-admin">
+            <span>👨‍🌾</span>
+            <h3>Fazendeiros</h3>
+            <p>Consulte os clientes cadastrados.</p>
+            <a href="fazendeiro.html">Acessar</a>
+          </article>
+
+          <article class="modulo-admin">
+            <span>🌾</span>
+            <h3>Propriedades</h3>
+            <p>Visualize as propriedades cadastradas.</p>
+            <a href="propriedade.html">Acessar</a>
+          </article>
+
+          <article class="modulo-admin">
+            <span>🚁</span>
+            <h3>Drones</h3>
+            <p>Consulte os equipamentos da empresa.</p>
+            <a href="drones.html">Acessar</a>
+          </article>
+
+          <article class="modulo-admin">
+            <span>📅</span>
+            <h3>Controle de voos</h3>
+            <p>Gerencie as operações agrícolas.</p>
+            <a href="voos.html">Acessar</a>
+          </article>
+
+          <article class="modulo-admin">
+            <span>🔔</span>
+            <h3>Central de alertas</h3>
+            <p>Acompanhe as ocorrências agrícolas.</p>
+            <a href="alertas.html">Acessar</a>
+          </article>
+
+          <article class="modulo-admin">
+            <span>📄</span>
+            <h3>Contratos</h3>
+            <p>Gerencie aluguéis e renovações.</p>
+            <a href="contratos.html">Acessar</a>
+          </article>
+
+          <article class="modulo-admin">
+            <span>📊</span>
+            <h3>Relatórios</h3>
+            <p>Consulte os relatórios demonstrativos.</p>
+            <a href="relatorios.html">Acessar</a>
+          </article>
+
+          <article class="modulo-admin">
+            <span>🤖</span>
+            <h3>Inteligência Artificial</h3>
+            <p>Consulte as análises demonstrativas da YOLO.</p>
+            <a href="analise-ia.html">Acessar</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="secao-admin">
+        <h2>🌾 Propriedades cadastradas</h2>
+
+        <p>Informações registradas pelos fazendeiros no sistema.</p>
+
+        <div id="listaPropriedades" class="lista-propriedades"></div>
+      </section>
+    </main>
+
+    <script src="../demo.js"></script>
+
+    <script>
+      function atualizarPainel() {
+        const dados = obterDadosDemo();
+
+        document.getElementById("totalFazendeiros").textContent =
+          dados.fazendeiros.length;
+
+        document.getElementById("totalDrones").textContent =
+          dados.drones.length;
+
+        document.getElementById("totalPropriedades").textContent =
+          dados.propriedades.length;
+
+        document.getElementById("totalAlertas").textContent =
+          dados.alertas.length;
+
+        const lista = document.getElementById("listaPropriedades");
+
+        lista.innerHTML = "";
+
+        if (dados.propriedades.length === 0) {
+          const vazio = document.createElement("div");
+          vazio.className = "sem-propriedades";
+          vazio.textContent = "Nenhuma propriedade cadastrada até o momento.";
+
+          lista.appendChild(vazio);
+
+          return;
+        }
+
+        dados.propriedades.forEach(function (propriedade) {
+          const cartao = document.createElement("article");
+          cartao.className = "propriedade-admin";
+
+          const titulo = document.createElement("h3");
+          titulo.textContent = "🌱 " + propriedade.nome;
+
+          const proprietario = document.createElement("p");
+          proprietario.textContent =
+            "Proprietário: " + propriedade.proprietario;
+
+          const localizacao = document.createElement("p");
+          localizacao.textContent = "Localização: " + propriedade.localizacao;
+
+          const tamanho = document.createElement("p");
+          tamanho.textContent = "Área: " + propriedade.tamanho + " hectares";
+
+          const cultivo = document.createElement("p");
+          cultivo.textContent = "Cultivo: " + propriedade.cultivo;
+
+          cartao.append(titulo, proprietario, localizacao, tamanho, cultivo);
+
+          lista.appendChild(cartao);
+        });
+      }
+
+      atualizarPainel();
+    </script>
+  </body>
+</html>

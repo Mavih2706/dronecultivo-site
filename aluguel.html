@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aluguel de Drones | DroneCultivo</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="painel-header">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="fazendeiro.html">Voltar ao painel</a>
+    </header>
+
+    <main class="painel-empresa">
+      <section class="empresa-boas-vindas">
+        <h1>Aluguel de Drones</h1>
+        <p>
+          Solicite serviços de monitoramento e pulverização agrícola com
+          tecnologia de drones.
+        </p>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Solicitar aluguel</h2>
+
+        <form class="form-propriedade" id="formAluguel">
+          <label for="nome">Nome do responsável</label>
+          <input type="text" id="nome" placeholder="Digite seu nome" required />
+
+          <label for="propriedade">Nome da propriedade</label>
+          <input
+            type="text"
+            id="propriedade"
+            placeholder="Nome da fazenda"
+            required
+          />
+
+          <label for="localizacao">Localização da propriedade</label>
+          <input
+            type="text"
+            id="localizacao"
+            placeholder="Cidade e estado"
+            required
+          />
+
+          <label for="servico">Serviço desejado</label>
+          <select id="servico" required>
+            <option value="">Selecione o serviço</option>
+            <option value="Monitoramento agrícola">
+              Monitoramento agrícola
+            </option>
+            <option value="Pulverização agrícola">Pulverização agrícola</option>
+            <option value="Monitoramento e pulverização">
+              Monitoramento e pulverização
+            </option>
+          </select>
+
+          <label for="area">Área de atendimento (hectares)</label>
+          <input
+            type="number"
+            id="area"
+            min="0.01"
+            step="any"
+            placeholder="Ex: 100"
+            required
+          />
+
+          <label for="inicio">Data desejada para início</label>
+          <input type="date" id="inicio" required />
+
+          <label for="periodo">Período de aluguel</label>
+          <select id="periodo" required>
+            <option value="">Selecione o período</option>
+            <option value="1 semana">1 semana</option>
+            <option value="15 dias">15 dias</option>
+            <option value="1 mês">1 mês</option>
+            <option value="A combinar">A combinar</option>
+          </select>
+
+          <label for="observacoes">Observações</label>
+          <textarea
+            id="observacoes"
+            placeholder="Conte mais sobre sua necessidade..."
+            rows="4"
+          ></textarea>
+
+          <button type="submit">Solicitar aluguel</button>
+
+          <p id="mensagemAluguel"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="../aluguel.js"></script>
+    <script src="../aluguel.js" defer></script>
+  </body>
+</html>

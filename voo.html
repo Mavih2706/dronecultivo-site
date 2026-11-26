@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Controle de Voos | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../voo.js" defer></script>
+  </head>
+
+  <body>
+    <header class="painel-header">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="empresa.html">Voltar ao painel</a>
+    </header>
+
+    <main class="painel-empresa">
+      <section class="empresa-boas-vindas">
+        <h1>Controle de Voos</h1>
+        <p>Gerencie o agendamento e o histórico das operações com drones.</p>
+      </section>
+
+      <!-- FILTRO DE RELATÓRIOS -->
+      <section class="empresa-modulos filtro-relatorios-voos">
+        <h2>Consultar relatórios de voos</h2>
+
+        <input
+          type="search"
+          id="filtroVoos"
+          placeholder="Pesquisar propriedade, drone ou responsável..."
+        />
+
+        <select id="filtroStatus">
+          <option value="Todos">Todos os status</option>
+          <option value="Agendado">Agendados</option>
+          <option value="Realizado">Realizados</option>
+        </select>
+
+        <p id="resultadoFiltro"></p>
+        <p id="areaTotalVoos"></p>
+      </section>
+
+      <!-- RESUMO DAS OPERAÇÕES -->
+      <section class="empresa-modulos">
+        <h2>Operações de voo</h2>
+
+        <div class="empresa-grid">
+          <article class="modulo">
+            <span>📅</span>
+            <h3>Agendamentos</h3>
+            <p>Próximos voos programados.</p>
+            <strong id="totalAgendamentos">0</strong>
+          </article>
+
+          <article class="modulo">
+            <span>🚁</span>
+            <h3>Voos realizados</h3>
+            <p>Operações concluídas.</p>
+            <strong id="totalRealizados">0</strong>
+          </article>
+
+          <article class="modulo">
+            <span>📍</span>
+            <h3>Monitoramento</h3>
+            <p>Atividades registradas nas propriedades.</p>
+            <strong id="totalVoos">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <!-- FORMULÁRIO DE AGENDAMENTO -->
+      <section class="empresa-modulos voos-formulario">
+        <h2>Agendar novo voo</h2>
+
+        <form class="form-propriedade" id="formVoo">
+          <label for="propriedade">Nome da propriedade</label>
+          <input
+            type="text"
+            id="propriedade"
+            placeholder="Digite o nome da propriedade"
+            required
+          />
+
+          <label for="responsavel">Responsável pela operação</label>
+          <input
+            type="text"
+            id="responsavel"
+            placeholder="Nome do responsável"
+            required
+          />
+
+          <label for="drone">Modelo do equipamento</label>
+          <select id="drone" required>
+            <option value="">Selecione o equipamento</option>
+            <option value="DJI Agras T40">DJI Agras T40</option>
+            <option value="Drone de monitoramento (asa fixa)">
+              Drone de monitoramento (asa fixa)
+            </option>
+            <option value="Drone de monitoramento multiespectral">
+              Drone de monitoramento multiespectral
+            </option>
+          </select>
+
+          <label for="servico">Tipo de operação</label>
+          <select id="servico" required>
+            <option value="">Selecione a operação</option>
+            <option value="Pulverização agrícola">Pulverização agrícola</option>
+            <option value="Mapeamento topográfico">
+              Mapeamento topográfico
+            </option>
+            <option value="Monitoramento da lavoura">
+              Monitoramento da lavoura
+            </option>
+          </select>
+
+          <label for="dataVoo">Data do voo</label>
+          <input type="date" id="dataVoo" required />
+
+          <label for="area">Área da operação (hectares)</label>
+          <input
+            type="number"
+            id="area"
+            min="0.01"
+            step="any"
+            placeholder="Ex: 100"
+            required
+          />
+
+          <label for="observacoesVoo">Observações</label>
+          <textarea
+            id="observacoesVoo"
+            rows="4"
+            placeholder="Informações adicionais sobre o voo..."
+          ></textarea>
+
+          <button type="submit">Agendar voo</button>
+
+          <p id="mensagemVoo"></p>
+        </form>
+      </section>
+
+      <!-- VOOS AGENDADOS -->
+      <section class="empresa-modulos voos-lista">
+        <h2>Voos agendados</h2>
+
+        <div id="listaAgendamentos">
+          <p>Carregando agendamentos...</p>
+        </div>
+      </section>
+
+      <!-- HISTÓRICO -->
+      <section class="empresa-modulos voos-lista">
+        <h2>Histórico de voos realizados</h2>
+
+        <div id="listaRealizados">
+          <p>Carregando histórico...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="painel-rodape">
+      <p>© 2026 DroneCultivo — Tecnologia para o campo.</p>
+    </footer>
+  </body>
+</html>

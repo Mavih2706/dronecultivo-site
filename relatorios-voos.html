@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relatórios de Voos | DroneCultivo</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <header class="painel-header">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="relatorios.html">Voltar aos relatórios</a>
+    </header>
+
+    <main class="painel-empresa">
+      <section class="empresa-boas-vindas">
+        <h1>🚁 Relatórios de Voos</h1>
+        <p>
+          Consulte o histórico e os resultados das operações realizadas pelos
+          drones agrícolas.
+        </p>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Resumo das operações</h2>
+
+        <div class="empresa-grid">
+          <article class="modulo">
+            <span>🚁</span>
+            <h3>Total de voos</h3>
+            <p id="totalVoosRelatorio">0</p>
+          </article>
+
+          <article class="modulo">
+            <span>📅</span>
+            <h3>Voos agendados</h3>
+            <p id="totalAgendadosRelatorio">0</p>
+          </article>
+
+          <article class="modulo">
+            <span>✅</span>
+            <h3>Voos realizados</h3>
+            <p id="totalRealizadosRelatorio">0</p>
+          </article>
+
+          <article class="modulo">
+            <span>🌱</span>
+            <h3>Área monitorada</h3>
+            <p id="areaTotalRelatorio">0 hectares</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Consultar histórico</h2>
+
+        <div class="filtro-relatorios-voos">
+          <input
+            type="text"
+            id="pesquisaRelatorio"
+            placeholder="Pesquisar propriedade, responsável ou drone..."
+          />
+
+          <select id="statusRelatorio">
+            <option value="Todos">Todos os status</option>
+            <option value="Agendado">Agendados</option>
+            <option value="Realizado">Realizados</option>
+          </select>
+        </div>
+
+        <p id="resultadoRelatorio">Carregando relatórios...</p>
+
+        <h2>✅ Voos realizados</h2>
+
+        <div id="listaVoosRealizadosRelatorio">
+          Nenhum voo realizado encontrado.
+        </div>
+
+        <h2>📅 Voos agendados</h2>
+
+        <div id="listaVoosAgendadosRelatorio">
+          Nenhum voo agendado encontrado.
+        </div>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Atualização dos dados</h2>
+
+        <p id="ultimaAtualizacaoRelatorio">Aguardando atualização...</p>
+
+        <button type="button" id="botaoAtualizarRelatorio">
+          🔄 Atualizar relatórios
+        </button>
+
+        <button type="button" id="botaoImprimirRelatorio">
+          🖨️ Imprimir relatório
+        </button>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>© 2026 DroneCultivo - Tecnologia para o agronegócio.</p>
+    </footer>
+
+    <script src="../relatorios-voos.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Minha Propriedade | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <style>
+      body {
+        background: #f3f7f3;
+        color: #24352c;
+        font-family: Arial, sans-serif;
+      }
+
+      .topo {
+        background: #123d2b;
+        color: white;
+        padding: 20px 6%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .topo h2 {
+        margin: 0;
+      }
+
+      .topo a {
+        color: white;
+        text-decoration: none;
+        border: 1px solid #8bbd9b;
+        padding: 10px 17px;
+        border-radius: 8px;
+      }
+
+      .conteudo {
+        width: 90%;
+        max-width: 1100px;
+        margin: 35px auto;
+      }
+
+      .banner {
+        background: linear-gradient(120deg, #123d2b, #246344);
+        color: white;
+        padding: 35px;
+        border-radius: 15px;
+        margin-bottom: 25px;
+      }
+
+      .banner h1 {
+        margin-top: 0;
+      }
+
+      .banner p {
+        color: #d4eadb;
+      }
+
+      .card {
+        background: white;
+        padding: 28px;
+        border-radius: 14px;
+        box-shadow: 0 4px 15px rgba(20, 60, 35, 0.06);
+        margin-bottom: 22px;
+      }
+
+      .card h2 {
+        color: #174a31;
+        margin-top: 0;
+      }
+
+      .grade {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+      }
+
+      .informacao {
+        background: #f5f9f5;
+        padding: 18px;
+        border-radius: 9px;
+        border-left: 4px solid #27804d;
+      }
+
+      .informacao span {
+        display: block;
+        color: #718075;
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      .informacao strong {
+        color: #174a31;
+        font-size: 17px;
+        overflow-wrap: anywhere;
+      }
+
+      .vazio {
+        text-align: center;
+        padding: 35px 20px;
+        background: white;
+        border-radius: 14px;
+      }
+
+      .vazio p {
+        color: #718075;
+      }
+
+      .botao {
+        display: inline-block;
+        background: #197344;
+        color: white;
+        text-decoration: none;
+        padding: 12px 19px;
+        border-radius: 8px;
+        font-weight: bold;
+        margin-top: 12px;
+      }
+
+      .botao:hover {
+        background: #105a34;
+      }
+
+      @media (max-width: 600px) {
+        .grade {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          padding: 20px;
+        }
+
+        .banner {
+          padding: 25px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topo">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="fazendeiro.html">← Voltar</a>
+    </header>
+
+    <main class="conteudo">
+      <section class="banner">
+        <h1>Minha Propriedade</h1>
+        <p>Acompanhe as informações da sua propriedade agrícola.</p>
+      </section>
+
+      <div id="conteudoPropriedade"></div>
+    </main>
+
+    <script src="../demo.js"></script>
+
+    <script>
+      function carregarMinhaPropriedade() {
+        const dados = obterDadosDemo();
+        const area = document.getElementById("conteudoPropriedade");
+
+        area.innerHTML = "";
+
+        if (dados.propriedades.length === 0) {
+          const vazio = document.createElement("section");
+          vazio.className = "vazio";
+
+          const titulo = document.createElement("h2");
+          titulo.textContent = "Nenhuma propriedade encontrada";
+
+          const texto = document.createElement("p");
+          texto.textContent =
+            "Cadastre sua propriedade para visualizar suas informações aqui.";
+
+          const link = document.createElement("a");
+          link.href = "propriedade.html";
+          link.className = "botao";
+          link.textContent = "Cadastrar propriedade";
+
+          vazio.append(titulo, texto, link);
+          area.appendChild(vazio);
+
+          return;
+        }
+
+        dados.propriedades.forEach(function (propriedade) {
+          const card = document.createElement("section");
+          card.className = "card";
+
+          const titulo = document.createElement("h2");
+          titulo.textContent = "🌾 " + propriedade.nome;
+
+          const grade = document.createElement("div");
+          grade.className = "grade";
+
+          const informacoes = [
+            ["Proprietário", propriedade.proprietario],
+            ["Localização", propriedade.localizacao],
+            ["Tamanho da propriedade", propriedade.tamanho + " hectares"],
+            ["Tipo de cultivo", propriedade.cultivo],
+          ];
+
+          informacoes.forEach(function (item) {
+            const bloco = document.createElement("div");
+            bloco.className = "informacao";
+
+            const legenda = document.createElement("span");
+            legenda.textContent = item[0];
+
+            const valor = document.createElement("strong");
+            valor.textContent = item[1];
+
+            bloco.append(legenda, valor);
+            grade.appendChild(bloco);
+          });
+
+          card.append(titulo, grade);
+          area.appendChild(card);
+        });
+      }
+
+      carregarMinhaPropriedade();
+    </script>
+  </body>
+</html>

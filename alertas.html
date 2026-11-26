@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Alertas das Propriedades | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../alertas.js" defer></script>
+  </head>
+
+  <body>
+    <header class="painel-header">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="empresa.html">Voltar ao painel</a>
+    </header>
+
+    <main class="painel-empresa">
+      <section class="empresa-boas-vindas">
+        <h1>Alertas das Propriedades</h1>
+        <p>
+          Acompanhe ocorrências e situações que precisam de atenção nas
+          propriedades agrícolas.
+        </p>
+      </section>
+
+      <!-- RESUMO DOS ALERTAS -->
+      <section class="empresa-modulos">
+        <h2>Resumo dos alertas</h2>
+
+        <div class="empresa-grid">
+          <article class="modulo">
+            <span>🚨</span>
+            <h3>Prioridade alta</h3>
+            <p>Alertas que precisam de atenção imediata.</p>
+            <strong id="alertasAltos">0</strong>
+          </article>
+
+          <article class="modulo">
+            <span>⚠️</span>
+            <h3>Prioridade média</h3>
+            <p>Ocorrências que precisam ser acompanhadas.</p>
+            <strong id="alertasMedios">0</strong>
+          </article>
+
+          <article class="modulo">
+            <span>ℹ️</span>
+            <h3>Prioridade baixa</h3>
+            <p>Informações e avisos gerais.</p>
+            <strong id="alertasBaixos">0</strong>
+          </article>
+        </div>
+      </section>
+
+      <!-- FILTRO DOS ALERTAS -->
+      <section class="empresa-modulos">
+        <h2>Consultar alertas</h2>
+
+        <label for="filtroPrioridade">Filtrar por prioridade:</label>
+
+        <select id="filtroPrioridade" class="filtro-alertas">
+          <option value="todos">Todos os alertas</option>
+          <option value="Alta">Prioridade alta</option>
+          <option value="Média">Prioridade média</option>
+          <option value="Baixa">Prioridade baixa</option>
+          <option value="Resolvido">Resolvidos</option>
+        </select>
+
+        <div id="listaAlertas">
+          <p>Carregando alertas...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="painel-rodape">
+      <p>© 2026 DroneCultivo — Tecnologia para o campo.</p>
+    </footer>
+  </body>
+</html>

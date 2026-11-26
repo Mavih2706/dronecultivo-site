@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Cadastrar Propriedade | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        background: #f3f6f1;
+        color: #263b30;
+      }
+
+      /* CABEÇALHO */
+      .topo-propriedade {
+        width: 100%;
+        min-height: 75px;
+        padding: 0 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #102e22;
+      }
+
+      .logo-propriedade {
+        color: #ffffff;
+        font-size: 22px;
+        font-weight: 800;
+        letter-spacing: -1px;
+      }
+
+      .logo-propriedade span {
+        color: #a4c477;
+      }
+
+      .voltar-painel {
+        padding: 11px 20px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 8px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 700;
+        transition: 0.3s;
+      }
+
+      .voltar-painel:hover {
+        background: #ffffff;
+        color: #102e22;
+      }
+
+      /* CONTEÚDO */
+      .conteudo-propriedade {
+        width: 90%;
+        max-width: 1050px;
+        margin: 55px auto 80px;
+      }
+
+      /* APRESENTAÇÃO */
+      .apresentacao-propriedade {
+        position: relative;
+        overflow: hidden;
+        padding: 48px 50px;
+        border-radius: 18px;
+        background: linear-gradient(120deg, #102e22, #20543a);
+        color: #ffffff;
+      }
+
+      .apresentacao-propriedade::after {
+        content: "";
+        position: absolute;
+        width: 230px;
+        height: 230px;
+        right: -65px;
+        bottom: -110px;
+        border: 35px solid rgba(164, 196, 119, 0.12);
+        border-radius: 50%;
+      }
+
+      .etiqueta-propriedade {
+        display: inline-block;
+        margin-bottom: 16px;
+        padding: 7px 13px;
+        border-radius: 30px;
+        background: rgba(164, 196, 119, 0.15);
+        color: #c5df9d;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 1px;
+      }
+
+      .apresentacao-propriedade h1 {
+        max-width: 650px;
+        margin: 0 0 15px;
+        font-size: clamp(29px, 4vw, 40px);
+        line-height: 1.2;
+        font-weight: 800;
+      }
+
+      .apresentacao-propriedade p {
+        max-width: 620px;
+        margin: 0;
+        color: #d2dfd4;
+        font-size: 15px;
+        line-height: 1.8;
+      }
+
+      /* FORMULÁRIO */
+      .area-formulario {
+        max-width: 850px;
+        margin: -15px auto 0;
+        position: relative;
+        z-index: 1;
+        padding: 38px;
+        border: 1px solid #e4eae2;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 15px 40px rgba(16, 46, 34, 0.08);
+      }
+
+      .titulo-formulario {
+        margin-bottom: 28px;
+      }
+
+      .titulo-formulario h2 {
+        margin: 0 0 8px;
+        color: #173c2a;
+        font-size: 21px;
+        font-weight: 800;
+      }
+
+      .titulo-formulario p {
+        margin: 0;
+        color: #78857b;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      #formPropriedade {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .campo-formulario {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .campo-formulario label {
+        color: #254532;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .campo-formulario input,
+      .campo-formulario select {
+        width: 100%;
+        min-height: 51px;
+        padding: 13px 15px;
+        border: 1px solid #dce5dc;
+        border-radius: 9px;
+        background: #f9fbf8;
+        color: #263b30;
+        font-family: "Manrope", sans-serif;
+        font-size: 13px;
+        transition: 0.25s;
+      }
+
+      .campo-formulario input::placeholder {
+        color: #a0aaa1;
+      }
+
+      .campo-formulario input:focus,
+      .campo-formulario select:focus {
+        outline: none;
+        border-color: #477b4c;
+        background: #ffffff;
+        box-shadow: 0 0 0 3px rgba(71, 123, 76, 0.12);
+      }
+
+      /* BOTÃO */
+      .botao-cadastrar {
+        width: 100%;
+        min-height: 53px;
+        margin-top: 8px;
+        border: none;
+        border-radius: 9px;
+        background: #174b32;
+        color: #ffffff;
+        font-family: "Manrope", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .botao-cadastrar:hover {
+        background: #286542;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(23, 75, 50, 0.17);
+      }
+
+      #mensagemPropriedade {
+        margin-top: 5px;
+        text-align: center;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      /* RODAPÉ */
+      .rodape-propriedade {
+        padding: 25px 15px;
+        border-top: 1px solid #e2e9e1;
+        color: #849087;
+        text-align: center;
+        font-size: 12px;
+      }
+
+      /* CELULAR */
+      @media (max-width: 650px) {
+        .topo-propriedade {
+          padding: 0 5%;
+        }
+
+        .logo-propriedade {
+          font-size: 18px;
+        }
+
+        .voltar-painel {
+          padding: 9px 12px;
+          font-size: 11px;
+        }
+
+        .conteudo-propriedade {
+          width: 92%;
+          margin: 30px auto 50px;
+        }
+
+        .apresentacao-propriedade {
+          padding: 32px 24px;
+        }
+
+        .apresentacao-propriedade p {
+          font-size: 13px;
+        }
+
+        .area-formulario {
+          margin-top: -10px;
+          padding: 25px 20px;
+        }
+
+        .titulo-formulario h2 {
+          font-size: 19px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="topo-propriedade">
+      <div class="logo-propriedade">DRONE<span>CULTIVO</span></div>
+
+      <a href="fazendeiro.html" class="voltar-painel"> ← Voltar ao painel </a>
+    </header>
+
+    <main class="conteudo-propriedade">
+      <section class="apresentacao-propriedade">
+        <span class="etiqueta-propriedade"> ÁREA DO PRODUTOR </span>
+
+        <h1>Cadastrar minha propriedade</h1>
+
+        <p>
+          Cadastre sua propriedade rural na plataforma DroneCultivo e tenha
+          acesso às soluções de monitoramento e tecnologia agrícola.
+        </p>
+      </section>
+
+      <section class="area-formulario">
+        <div class="titulo-formulario">
+          <h2>Informações da propriedade</h2>
+
+          <p>
+            Preencha os campos abaixo com os dados da sua propriedade rural.
+          </p>
+        </div>
+
+        <form id="formPropriedade">
+          <div class="campo-formulario">
+            <label for="nome">Nome da propriedade</label>
+
+            <input
+              type="text"
+              id="nome"
+              placeholder="Ex.: Fazenda São João"
+              required
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="proprietario">Nome do proprietário</label>
+
+            <input
+              type="text"
+              id="proprietario"
+              placeholder="Digite seu nome completo"
+              required
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="localizacao">Localização</label>
+
+            <input
+              type="text"
+              id="localizacao"
+              placeholder="Cidade, estado ou endereço"
+              required
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="tamanho"> Tamanho da propriedade (hectares) </label>
+
+            <input
+              type="number"
+              id="tamanho"
+              placeholder="Ex.: 50"
+              min="0.01"
+              step="any"
+              required
+            />
+          </div>
+
+          <div class="campo-formulario">
+            <label for="cultivo">Tipo de cultivo</label>
+
+            <select id="cultivo" required>
+              <option value="">Selecione o cultivo</option>
+              <option value="Soja">Soja</option>
+              <option value="Milho">Milho</option>
+              <option value="Café">Café</option>
+              <option value="Cana-de-açúcar">Cana-de-açúcar</option>
+              <option value="Algodão">Algodão</option>
+              <option value="Feijão">Feijão</option>
+              <option value="Fruticultura">Fruticultura</option>
+              <option value="Hortaliças">Hortaliças</option>
+              <option value="Outro">Outro</option>
+            </select>
+          </div>
+
+          <button type="submit" class="botao-cadastrar">
+            Cadastrar propriedade →
+          </button>
+
+          <p id="mensagemPropriedade"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="rodape-propriedade">
+      © 2026 DroneCultivo — Tecnologia para o campo.
+    </footer>
+
+    <script src="../demo.js"></script>
+    <script src="../propriedade.js"></script>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Monitoramento Agrícola | DroneCultivo</title>
+
+    <link rel="stylesheet" href="../style.css" />
+    <script src="../monitoramento.js" defer></script>
+  </head>
+
+  <body>
+    <header class="painel-header">
+      <h2>🌱 DRONECULTIVO</h2>
+      <a href="relatorios.html">Voltar aos relatórios</a>
+    </header>
+
+    <main class="painel-empresa">
+      <section class="empresa-boas-vindas">
+        <h1>Monitoramento Agrícola</h1>
+        <p>
+          Acompanhe as condições da plantação e visualize indicadores de
+          desenvolvimento agrícola.
+        </p>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Visão geral da propriedade</h2>
+
+        <div class="empresa-grid">
+          <article class="modulo">
+            <span>🌾</span>
+            <h3>Propriedade</h3>
+            <p>Fazenda Esperança</p>
+          </article>
+
+          <article class="modulo">
+            <span>📐</span>
+            <h3>Área monitorada</h3>
+            <p>120 hectares</p>
+          </article>
+
+          <article class="modulo">
+            <span>🌱</span>
+            <h3>Cultivo</h3>
+            <p>Soja</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Indicadores agrícolas</h2>
+
+        <div class="empresa-grid">
+          <article class="modulo">
+            <span>🌿</span>
+            <h3>Saúde da vegetação</h3>
+            <strong id="saudeVegetacao">85%</strong>
+            <p>Índice demonstrativo</p>
+          </article>
+
+          <article class="modulo">
+            <span>💧</span>
+            <h3>Umidade do solo</h3>
+            <strong id="umidadeSolo">62%</strong>
+            <p>Índice demonstrativo</p>
+          </article>
+
+          <article class="modulo">
+            <span>🌡️</span>
+            <h3>Temperatura</h3>
+            <strong id="temperatura">26°C</strong>
+            <p>Valor demonstrativo</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Desenvolvimento da plantação</h2>
+
+        <div class="monitoramento-grafico">
+          <div class="grafico-item">
+            <div class="grafico-info">
+              <span>Saúde da vegetação</span>
+              <strong>85%</strong>
+            </div>
+            <div class="barra-fundo">
+              <div class="barra-progresso" style="width: 85%"></div>
+            </div>
+          </div>
+
+          <div class="grafico-item">
+            <div class="grafico-info">
+              <span>Umidade do solo</span>
+              <strong>62%</strong>
+            </div>
+            <div class="barra-fundo">
+              <div class="barra-progresso" style="width: 62%"></div>
+            </div>
+          </div>
+
+          <div class="grafico-item">
+            <div class="grafico-info">
+              <span>Desenvolvimento da cultura</span>
+              <strong>78%</strong>
+            </div>
+            <div class="barra-fundo">
+              <div class="barra-progresso" style="width: 78%"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Alertas agrícolas</h2>
+
+        <div id="listaAlertasMonitoramento">
+          <p>Carregando alertas...</p>
+        </div>
+      </section>
+
+      <section class="empresa-modulos">
+        <h2>Atualização do monitoramento</h2>
+
+        <p id="ultimaAtualizacao">Dados demonstrativos do projeto.</p>
+
+        <button type="button" id="botaoAtualizarMonitoramento">
+          Atualizar indicadores
+        </button>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>© 2026 DroneCultivo - Tecnologia para o agronegócio.</p>
+    </footer>
+  </body>
+</html>
